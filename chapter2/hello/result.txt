@@ -1,0 +1,9 @@
+$ cargo run 42 56
+   Compiling hello v0.1.0 (/home/takumi/Documents/learnig_programing_rust_2nd_edition/chapter2/hello)
+    Finished dev [unoptimized + debuginfo] target(s) in 0.47s
+     Running `target/debug/hello 42 56`
+The gratest common divisor of [42, 56] is 14
+$ cargo run 799459 28823 27347
+    Finished dev [unoptimized + debuginfo] target(s) in 0.00s
+     Running `target/debug/hello 799459 28823 27347`
+The gratest common divisor of [799459, 28823, 27347] is 41
