@@ -204,8 +204,8 @@
 - [ ] 13章 ユーティリティトレイト
     - [x] 13.1 Drop
     - [x] 13.2 Sized
-    - [ ] 13.3 Clone
-    - [ ] 13.4 Copy
+    - [x] 13.3 Clone
+    - [x] 13.4 Copy
     - [ ] 13.5 DerefとDerefMut
     - [ ] 13.6 Default
     - [ ] 13.7 AsRefとAsMut
