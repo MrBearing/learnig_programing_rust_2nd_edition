@@ -206,9 +206,9 @@
     - [x] 13.2 Sized
     - [x] 13.3 Clone
     - [x] 13.4 Copy
-    - [ ] 13.5 DerefとDerefMut
-    - [ ] 13.6 Default
-    - [ ] 13.7 AsRefとAsMut
+    - [x] 13.5 DerefとDerefMut
+    - [x] 13.6 Default
+    - [x] 13.7 AsRefとAsMut
     - [ ] 13.8 BorrowとBorrowMut
     - [ ] 13.9 FromとInto
     - [ ] 13.10 TryFromとTryInto
