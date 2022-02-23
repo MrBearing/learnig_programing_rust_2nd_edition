@@ -15,12 +15,11 @@ O'reillyの[”プログラミング Rust 第2版”](https://www.oreilly.co.jp/
 ```
 learnig_programing_rust_2nd_edition
 ├── chapterxx
-│   ├── note.md
-│   └── some_practice_crate
+│   ├── note.md   # その章を読んで出てきた疑問点や要約等のメモ
+│   └── some_practice_crate # 何らかの練習プロジェクト
 │       ├── Cargo.lock
 │       ├── Cargo.toml
-│       ├── src
-│       └── target
+│       └── src
 ├── progress.md # 進捗状況
 └── README.md   # このファイル
 ```
