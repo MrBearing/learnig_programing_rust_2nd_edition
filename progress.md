@@ -209,8 +209,8 @@
     - [x] 13.5 DerefとDerefMut
     - [x] 13.6 Default
     - [x] 13.7 AsRefとAsMut
-    - [ ] 13.8 BorrowとBorrowMut
-    - [ ] 13.9 FromとInto
+    - [x] 13.8 BorrowとBorrowMut
+    - [x] 13.9 FromとInto
     - [ ] 13.10 TryFromとTryInto
     - [ ] 13.11 ToOwned
     - [ ] 13.12 BorrowとToOwnedの動作例 : つつましいCow
