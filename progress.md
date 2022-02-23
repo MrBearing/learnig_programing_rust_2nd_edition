@@ -201,7 +201,7 @@
     - [ ] 12.4 IndexとIndexMut
     - [ ] 12.5 その他の演算子
 
-- [ ] 13章 ユーティリティトレイト
+- [x] 13章 ユーティリティトレイト
     - [x] 13.1 Drop
     - [x] 13.2 Sized
     - [x] 13.3 Clone
@@ -211,9 +211,9 @@
     - [x] 13.7 AsRefとAsMut
     - [x] 13.8 BorrowとBorrowMut
     - [x] 13.9 FromとInto
-    - [ ] 13.10 TryFromとTryInto
-    - [ ] 13.11 ToOwned
-    - [ ] 13.12 BorrowとToOwnedの動作例 : つつましいCow
+    - [x] 13.10 TryFromとTryInto
+    - [x] 13.11 ToOwned
+    - [x] 13.12 BorrowとToOwnedの動作例 : つつましいCow
 
 - [ ] 14章 クロージャ
     - [ ] 14.1 変数のキャプチャ
