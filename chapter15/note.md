@@ -3,18 +3,19 @@
 - 「速度よりもl表現力を重視する関数型プログラミング」という表現は使えそう
 - 
 
-
-
 ##  15.1 IteratorトレイトとIntoIteratorトレイト
 
 - Iterator はnextを持つだけの単純なトレイト
 - IntoIteratorはinto_iterメソッドでIteratorを生成できるトレイト
-- 
-
-
+- 用語の整理
+  - iterable: IntoIteratorを実装した型
+  - consumer: イテレータを受け取るコードのこと
+ 
 ##  15.2 イテレータの作成
 
+
 ### 15.2.1 iterメソッドとiter_mutメソッド
+
 
 ### 15.2.2 IntoIteratorの実装
 
