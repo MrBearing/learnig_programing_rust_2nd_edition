@@ -7,8 +7,13 @@ fn main() {
 #[cfg(test)]
 mod tests {
     
-    // #[test]
-    
+    #[test]
+    fn test_into_iterator(){
+        use std::collections::BTreetSet;
+        let mut favorites = BTreetSet::new();
+        favorites.insert("Lucy in the Sky With Diamonds".to_string());
+        favorites.insert("")
+    }
 
     #[test]
     fn test_iter_example2(){
