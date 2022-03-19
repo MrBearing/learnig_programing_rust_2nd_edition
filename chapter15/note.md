@@ -15,9 +15,14 @@
 
 ### 15.2.1 iterメソッドとiter_mutメソッド
 
-
+- 使い方の話だけっぽい？
+- iter_mut()使ってないっぽいけど？
+  - 内部の値を入れ替えたりだからよいのかな
 
 ### 15.2.2 IntoIteratorの実装
+
+- 可変参照に対するIntoIteratorを実装していない型があるから注意
+- ジェネリックなコード書くときにIntoIteratorをWhere区で取ると便利
 
 ### 15.2.3 from_fnとsuccessors
 

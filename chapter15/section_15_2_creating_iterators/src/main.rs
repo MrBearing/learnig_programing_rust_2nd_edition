@@ -1,18 +1,43 @@
 
 
 fn main() {
-    println!("for run: cargo test ");
+
+    let v = vec![4, 20, 12, 8, 6];
+    let mut iterator = v.iter();
+    println!("test example dump func");
+    dump(iterator);
+
 }
+
+use std::fmt::Debug;
+
+fn dump<T,U>(t: T)
+    where T: IntoIterator<Item=U>,
+            U: Debug
+{
+    for u in t{
+        println!("{:?}", u);
+    }
+}
+
 
 #[cfg(test)]
 mod tests {
-    
+  
+
+
     #[test]
     fn test_into_iterator(){
-        use std::collections::BTreetSet;
-        let mut favorites = BTreetSet::new();
+        use std::collections::BTreeSet;
+        let mut favorites = BTreeSet::new();
         favorites.insert("Lucy in the Sky With Diamonds".to_string());
-        favorites.insert("")
+        favorites.insert("Liebestra...".to_string());
+        dbg!("favorites");
+        let mut it = favorites.into_iter();
+        assert_eq!(it.next(), Some("Liebestra...".to_string()));
+        assert_eq!(it.next(), Some("Lucy in the Sky With Diamonds".to_string()));
+        assert_eq!(it.next(), None);
+        
     }
 
     #[test]
