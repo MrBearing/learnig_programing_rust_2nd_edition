@@ -1,11 +1,20 @@
-
+use rand::random;
+use std::iter::from_fn;
 
 fn main() {
 
     let v = vec![4, 20, 12, 8, 6];
-    let mut iterator = v.iter();
+    let iterator = v.iter();
     println!("test example dump func");
     dump(iterator);
+    println!("for 15.2.3");
+
+    let length : Vec<f64> =
+        from_fn(|| Some((random::<f64>() - random::<f64>()).abs()))
+        .take(1000)
+        .collect();
+    dump(length.iter());
+
 
 }
 
@@ -21,9 +30,35 @@ fn dump<T,U>(t: T)
 }
 
 
+
+
 #[cfg(test)]
 mod tests {
-  
+
+    #[test]
+    fn test_15_2_4(){
+        println!("for 15.2.4");
+        let mut outer = "Earth".to_string();
+        let inner = String::from_iter(outer.drain(1..4));
+        assert_eq!(outer, "Eh"); // outerはここでドロップしてるはず
+        assert_eq!(inner, "art");// drainで所有権が移ってるので、エラーにはならない
+    }
+
+    fn fibonacci() -> impl Iterator<Item=usize>{
+        let mut state = (0,1);
+        std::iter::from_fn(move || {
+            state = (state.1,state.0 + state.1);
+            Some(state.0)
+        })
+    }
+
+    #[test]
+    fn test_fibonacci(){
+        let fib = fibonacci().take( 8 ).collect::<Vec<_>>();
+        assert_eq!(fib,
+            vec![ 1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 ]);
+        dbg!(fib);
+    }
 
 
     #[test]
