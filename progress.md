@@ -230,17 +230,17 @@
     - [ ] 14.6 クロージャの効率的な利用
 
 - [ ] 15章 イテレータ
-    - [ ] 15.1 IteratorトレイトとIntoIteratorトレイト
-    - [ ] 15.2 イテレータの作成
-        - [ ] 15.2.1 iterメソッドとiter_mutメソッド
-        - [ ] 15.2.2 IntoIteratorの実装
-        - [ ] 15.2.3 from_fnとsuccessors
-        - [ ] 15.2.4 drainメソッド
-        - [ ] 15.2.5 他のイテレータの生成方法
+    - [x] 15.1 IteratorトレイトとIntoIteratorトレイト
+    - [x] 15.2 イテレータの作成
+        - [x] 15.2.1 iterメソッドとiter_mutメソッド
+        - [x] 15.2.2 IntoIteratorの実装
+        - [x] 15.2.3 from_fnとsuccessors
+        - [x] 15.2.4 drainメソッド
+        - [x] 15.2.5 他のイテレータの生成方法
     - [ ] 15.3 イテレータアダプタ
-        - [ ] 15.3.1 mapとfilter
-        - [ ] 15.3.2 filter_mapとflat_map
-        - [ ] 15.3.3 flatten
+        - [x] 15.3.1 mapとfilter
+        - [x] 15.3.2 filter_mapとflat_map
+        - [x] 15.3.3 flatten
         - [ ] 15.3.4 takeとtake_while
         - [ ] 15.3.5 skipとskip_while
         - [ ] 15.3.6 peekable
