@@ -241,9 +241,9 @@
         - [x] 15.3.1 mapとfilter
         - [x] 15.3.2 filter_mapとflat_map
         - [x] 15.3.3 flatten
-        - [ ] 15.3.4 takeとtake_while
-        - [ ] 15.3.5 skipとskip_while
-        - [ ] 15.3.6 peekable
+        - [x] 15.3.4 takeとtake_while
+        - [x] 15.3.5 skipとskip_while
+        - [x] 15.3.6 peekable
         - [ ] 15.3.7 fuse
         - [ ] 15.3.8 反転可能イテレータとrev
         - [ ] 15.3.9 inspect
