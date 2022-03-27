@@ -1,5 +1,5 @@
 [package]
-name = "s15_3_2_filter_map_and_flat_map"
+name = "s1_map_and_filter"
 version = "0.1.0"
 edition = "2021"
 

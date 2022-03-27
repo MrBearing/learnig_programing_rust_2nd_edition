@@ -1,5 +1,5 @@
 [package]
-name = "s1_iterator_and_into_iterator"
+name = "s3_flatten"
 version = "0.1.0"
 edition = "2021"
 

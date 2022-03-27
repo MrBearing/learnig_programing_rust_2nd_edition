@@ -1,5 +1,5 @@
 [package]
-name = "s15_3_3_flatten"
+name = "s6_peekable"
 version = "0.1.0"
 edition = "2021"
 

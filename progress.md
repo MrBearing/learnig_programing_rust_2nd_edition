@@ -244,9 +244,9 @@
         - [x] 15.3.4 takeとtake_while
         - [x] 15.3.5 skipとskip_while
         - [x] 15.3.6 peekable
-        - [ ] 15.3.7 fuse
-        - [ ] 15.3.8 反転可能イテレータとrev
-        - [ ] 15.3.9 inspect
+        - [x] 15.3.7 fuse
+        - [x] 15.3.8 反転可能イテレータとrev
+        - [x] 15.3.9 inspect
         - [ ] 15.3.10 chain
         - [ ] 15.3.11 enumerate
         - [ ] 15.3.12 zip
