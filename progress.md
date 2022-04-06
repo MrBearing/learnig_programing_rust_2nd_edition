@@ -248,8 +248,8 @@
         - [x] 15.3.8 反転可能イテレータとrev
         - [x] 15.3.9 inspect
         - [x] 15.3.10 chain
-        - [ ] 15.3.11 enumerate
-        - [ ] 15.3.12 zip
+        - [x] 15.3.11 enumerate
+        - [x] 15.3.12 zip
         - [ ] 15.3.13 by_ref
         - [ ] 15.3.14 clonedとcopied
         - [ ] 15.3.15 cycle
