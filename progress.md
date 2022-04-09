@@ -237,7 +237,7 @@
         - [x] 15.2.3 from_fnとsuccessors
         - [x] 15.2.4 drainメソッド
         - [x] 15.2.5 他のイテレータの生成方法
-    - [ ] 15.3 イテレータアダプタ
+    - [x] 15.3 イテレータアダプタ
         - [x] 15.3.1 mapとfilter
         - [x] 15.3.2 filter_mapとflat_map
         - [x] 15.3.3 flatten
@@ -250,9 +250,9 @@
         - [x] 15.3.10 chain
         - [x] 15.3.11 enumerate
         - [x] 15.3.12 zip
-        - [ ] 15.3.13 by_ref
-        - [ ] 15.3.14 clonedとcopied
-        - [ ] 15.3.15 cycle
+        - [x] 15.3.13 by_ref
+        - [x] 15.3.14 clonedとcopied
+        - [x] 15.3.15 cycle
     - [ ] 15.4 イテレータの消費
         - [ ] 15.4.1 単純な累積 : count、sum、product
         - [ ] 15.4.2 max、min
