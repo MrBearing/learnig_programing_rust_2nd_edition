@@ -253,8 +253,8 @@
         - [x] 15.3.13 by_ref
         - [x] 15.3.14 clonedとcopied
         - [x] 15.3.15 cycle
-    - [ ] 15.4 イテレータの消費
-        - [ ] 15.4.1 単純な累積 : count、sum、product
+    - [x] 15.4 イテレータの消費
+        - [x] 15.4.1 単純な累積 : count、sum、product
         - [ ] 15.4.2 max、min
         - [ ] 15.4.3 max_by、min_by
         - [ ] 15.4.4 max_by_key、min_by_key
