@@ -258,7 +258,7 @@
         - [x] 15.4.2 max、min
         - [x] 15.4.3 max_by、min_by
         - [x] 15.4.4 max_by_key、min_by_key
-        - [ ] 15.4.5 アイテム列の比較
+        - [ｘ] 15.4.5 アイテム列の比較
         - [ ] 15.4.6 any、all
         - [ ] 15.4.7 position、rposition、ExactSizeIterator
         - [ ] 15.4.8 foldとrfold
