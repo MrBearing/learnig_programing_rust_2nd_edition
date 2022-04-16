@@ -133,12 +133,24 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
   - 他の数に定義したければstd::iter::Sum,Productトレイトを実装する
 
 ### 15.4.2 max、min
-- 
+- std::cmp::Ordを実装していないと使えない。
+- NaNの取扱はしない
 ### 15.4.3 max_by、min_by
 - 比較演算の関数を渡して最大/最小を得るメソッド
-- 
+- クロージャないし比較関数の引数は**2つ**
 ### 15.4.4 max_by_key、min_by_key
+- Hashmapのvalue等アイテムに対してクロージャを適用した最大/最小のものを見つける場合に使う
+- クロージャの引数は**1つ**
 ### 15.4.5 アイテム列の比較
+- イテレータ同士の比較メソッド
+- メソッド名短縮しすぎてちょいわかりにくい
+  - eq: equal
+  - ne: not equal
+  - lt: less than
+  - le: less equal
+  - gt: greater than
+  - ge: greater equal
+
 ### 15.4.6 any、all
 ### 15.4.7 position、rposition、ExactSizeIterator
 ### 15.4.8 foldとrfold
