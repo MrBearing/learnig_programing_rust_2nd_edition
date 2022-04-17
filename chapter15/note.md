@@ -152,7 +152,18 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
   - ge: greater equal
 
 ### 15.4.6 any、all
+- この辺も関数型だとよくある話 
+  - all すべてが該当するか
+    - データの正確性チェックとか
+  - any どれが一つでも該当するか
+    - 
+
 ### 15.4.7 position、rposition、ExactSizeIterator
+- クロージャで指定したインデックスを返す
+- rpositionは右から
+  - ExactSizeIterator実装してないと使えない
+
+
 ### 15.4.8 foldとrfold
 ### 15.4.9 try_foldとtry_rfold
 ### 15.4.10 nthとnth_back
