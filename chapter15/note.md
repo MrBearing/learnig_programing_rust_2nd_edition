@@ -169,8 +169,13 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
   - クロージャでアキュムレータの値を更新
 ### 15.4.9 try_foldとtry_rfold
 - 失敗する可能性のあるfold
+  - String->u64 の変換とか
+  - Resultを取る場合とか
 
 ### 15.4.10 nthとnth_back
+- 指定個分、アイテムをスキップする
+  - 
+
 ### 15.4.11 last
 ### 15.4.12 find、rfind、find_map
 ### 15.4.13 コレクションの作成 : collectとFromIterator
