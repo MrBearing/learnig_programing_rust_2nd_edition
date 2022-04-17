@@ -185,7 +185,26 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
   - Optionの中身はカスタマイズが可能
 
 ### 15.4.13 コレクションの作成 : collectとFromIterator
+collect()でHashMapや、BtreeMapを作成することは可能
+
+例えば、以下のようにして作成可能
+```
+let args: HashMap<String,usize> = std::env::args.zip(0..).collect();
+```
+
+std::iter::FromIteratorトレイトを実装していれば、collectで作成可能。
+入れ先の変数の方を明確に示しておけば、型推論してメソッドを実行してくれる。
+
 ### 15.4.14 Extendトレイト
+- イテレータにアイテム追加するためのメソッド
+- 標準ライブラリは大体実装してる
+
 ### 15.4.15 partition
+- クロージャの真偽値判定でT/Fで分類する
+- 使用条件厳し目
+  - ExtendとDefaultの両方を実装してること
+
 ### 15.4.16 for_eachとtry_for_each
+- 個々のアイテムに対してクロージャを実行する
+- ファイル書き込み等で失敗の可能性が有るならtry_for_eachを使う
 ##  15.5 ユーザ定義イテレータの実装

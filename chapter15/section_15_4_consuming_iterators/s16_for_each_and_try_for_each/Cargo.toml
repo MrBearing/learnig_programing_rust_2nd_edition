@@ -1,0 +1,8 @@
+[package]
+name = "s16_for_each_and_try_for_each"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
