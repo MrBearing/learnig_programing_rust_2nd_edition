@@ -174,10 +174,16 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
 
 ### 15.4.10 nthとnth_back
 - 指定個分、アイテムをスキップする
-  - 
 
 ### 15.4.11 last
+- 最後のアイテムを返す
+
 ### 15.4.12 find、rfind、find_map
+- find　のクロージャは真偽値を見て最初にtrueを出した値をOptionで返す
+  - Optionの型はOption<Self::Item>で固定
+- find_mapはクロージャがOptionを返す。最初にクロージャSome<B>を返した値を返す
+  - Optionの中身はカスタマイズが可能
+
 ### 15.4.13 コレクションの作成 : collectとFromIterator
 ### 15.4.14 Extendトレイト
 ### 15.4.15 partition
