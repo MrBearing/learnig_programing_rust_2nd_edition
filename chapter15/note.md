@@ -163,9 +163,13 @@ Iteratorトレイトはアダプタメソッドをいくつか持ってるので
 - rpositionは右から
   - ExactSizeIterator実装してないと使えない
 
-
 ### 15.4.8 foldとrfold
+- 毎回覚えては忘れてる気がする
+  - アキュムレータ：初期値
+  - クロージャでアキュムレータの値を更新
 ### 15.4.9 try_foldとtry_rfold
+- 失敗する可能性のあるfold
+
 ### 15.4.10 nthとnth_back
 ### 15.4.11 last
 ### 15.4.12 find、rfind、find_map
