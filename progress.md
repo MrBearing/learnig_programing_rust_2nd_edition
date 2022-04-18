@@ -259,17 +259,17 @@
         - [x] 15.4.3 max_by、min_by
         - [x] 15.4.4 max_by_key、min_by_key
         - [ｘ] 15.4.5 アイテム列の比較
-        - [ ] 15.4.6 any、all
-        - [ ] 15.4.7 position、rposition、ExactSizeIterator
-        - [ ] 15.4.8 foldとrfold
-        - [ ] 15.4.9 try_foldとtry_rfold
-        - [ ] 15.4.10 nthとnth_back
-        - [ ] 15.4.11 last
-        - [ ] 15.4.12 find、rfind、find_map
-        - [ ] 15.4.13 コレクションの作成 : collectとFromIterator
-        - [ ] 15.4.14 Extendトレイト
-        - [ ] 15.4.15 partition
-        - [ ] 15.4.16 for_eachとtry_for_each
+        - [x] 15.4.6 any、all
+        - [x] 15.4.7 position、rposition、ExactSizeIterator
+        - [x] 15.4.8 foldとrfold
+        - [x] 15.4.9 try_foldとtry_rfold
+        - [x] 15.4.10 nthとnth_back
+        - [x] 15.4.11 last
+        - [x] 15.4.12 find、rfind、find_map
+        - [x] 15.4.13 コレクションの作成 : collectとFromIterator
+        - [x] 15.4.14 Extendトレイト
+        - [x] 15.4.15 partition
+        - [x] 15.4.16 for_eachとtry_for_each
     - [ ] 15.5 ユーザ定義イテレータの実装
 
 - [ ] 16章 コレクション
