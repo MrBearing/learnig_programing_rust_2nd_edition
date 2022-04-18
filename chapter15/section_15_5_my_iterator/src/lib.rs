@@ -118,5 +118,9 @@ mod test {
         }
         assert_eq!(v.len(),4, "length is not 4");
         assert_eq!(v, ["droid", "jaeger", "mecha", "robot"]);
+        assert_eq!(tree.iter()
+                    .map(|name| format!("mega-{}",name))
+                    .collect::<Vec<_>>(),
+                    vec!["mega-droid", "mega-jaeger","mega-mecha", "mega-robot"]);
     }
 }
