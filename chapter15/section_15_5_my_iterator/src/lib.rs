@@ -17,18 +17,18 @@ impl Iterator for I32Range{
     }
 }
 
-enum BinaryTree<T>{
+pub enum BinaryTree<T>{
     Empty,
     NonEmpty(Box<TreeNode<T>>)
 }
 
-struct TreeNode<T>{
+pub struct TreeNode<T>{
     element: T,
     left: BinaryTree<T>,
     right: BinaryTree<T>
 }
 
-struct TreeIter<'a, T: 'a>{
+pub struct TreeIter<'a, T: 'a>{
     unvisited: Vec<&'a TreeNode<T>>
 }
 
@@ -36,12 +36,13 @@ impl <'a, T: 'a> TreeIter<'a, T>{
     fn push_left_edge(&mut self, mut tree : &'a BinaryTree<T>){
         while let NonEmpty(ref node)= *tree { 
             self.unvisited.push(node);
+            tree = &node.left;
         }
     }
 }
 
 impl<T :Ord> BinaryTree<T>{
-    fn add(&mut self, value: T) {
+    pub fn add(&mut self, value: T) {
         match *self {
             BinaryTree::Empty => {
                 *self = BinaryTree::NonEmpty(Box::new(TreeNode {
@@ -59,7 +60,9 @@ impl<T :Ord> BinaryTree<T>{
             }
         }
     }
+}
 
+impl <T>BinaryTree<T> {
     fn iter(&self) -> TreeIter<T> {
         let mut iter = TreeIter{unvisited: Vec::new()};
         iter.push_left_edge(self);
@@ -109,9 +112,11 @@ mod test {
         tree.add("droid");
         tree.add("mecha");
         let mut v = Vec::new();
+        assert_eq!(v.len(),0, "length is not 0");
         for kind in &tree {
             v.push(*kind);
         }
+        assert_eq!(v.len(),4, "length is not 4");
         assert_eq!(v, ["droid", "jaeger", "mecha", "robot"]);
     }
 }
