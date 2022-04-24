@@ -345,8 +345,8 @@
         - [ ] 17.6.2 unicode-normalizationクレート
 
 - [ ] 18章 入出力
-    - [ ] 18.1 readerとwriter
-        - [ ] 18.1.1 Reader
+    - [x] 18.1 readerとwriter
+        - [x] 18.1.1 Reader
         - [ ] 18.1.2 バッファ付きreader
         - [ ] 18.1.3 行の読み出し
         - [ ] 18.1.4 行に対するcollect
