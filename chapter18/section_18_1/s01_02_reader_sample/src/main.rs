@@ -24,5 +24,5 @@ pub fn copy<R :?Sized, W: ?Sized>(reader: &mut R, writer: &mut W)
 
 
 fn main() {
-
+    // TODO copy関数動かしてみること
 }

@@ -3,6 +3,10 @@
 バイト単位の入力・出力機能についての章。基本的にRead,Write,BufReadについての解説
 
 ## 18.1 readerとwriter
+- 冒頭のコード試してみたいが。。何で実験するか。。
+- ```std::io::prelude::*```は常にインポート
+  - Read,Bufread,Write,Seekを含んだモジュール
+- ```std::io::self```もインポートする。```io::Error```等の書き方ができる様にするため(std::が省略できる)
 
 ### 18.1.1 Reader
 ### 18.1.2 バッファ付きreader
