@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "s1_iterator_and_into_iterator"
+name = "s03_implement_grep"
 version = "0.1.0"
