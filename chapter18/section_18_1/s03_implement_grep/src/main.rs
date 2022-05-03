@@ -20,13 +20,19 @@ fn grep_str(target: &str) -> io::Result<()> {
 fn grep<R>(target: &str, reader: R) -> io::Result<()> 
     where R: BufRead
 {
-    for line_result in reader.lines() {
-        let line = line_result?;
-        if line.contains(target){
-            println!(" {}", line);
-        }
-    }
+    // for line_result in reader.lines() {
+    //     let line = line_result?;
+    //     if line.contains(target){
+    //         println!(" {}", line);
+    //     }
+    // }
     
+    // イテレータで書き直し
+    reader.lines()
+        .filter_map(|line_result| line_result.ok())
+        .filter(|line| line.contains(target))
+        .for_each(|line| println!(" {}", line));
+
     Ok(())
 }
 
