@@ -1,5 +1,5 @@
 [package]
-name = "s03_echo_server"
+name = "echo_server"
 version = "0.1.0"
 edition = "2021"
 
