@@ -5,7 +5,7 @@ use std::fs::File;
 use std::path::PathBuf;
 
 
-fn grep_str(target: &str) -> io::Result<()> {
+fn _grep_str(target: &str) -> io::Result<()> {
     let stdin = io::stdin();
     for line_result in stdin.lock().lines(){
         let line = line_result?;
