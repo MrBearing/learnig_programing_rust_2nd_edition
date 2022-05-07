@@ -36,12 +36,27 @@
   - 処理の分割は適当にやってくれる
   - par_iter()カコいい
 
-
 ### 19.1.5 マンデルブロ集合再訪
-- [ ] あとでRayon使って再実装してみる
+- [x] あとでRayon使って再実装してみる
 - スレッドのマネージメントはクレートにやらせよう
   - 75%も速度が改善したのはすごい。。
 
+速度の改善結果確認
+
+```bash
+# in chaper 19 dir. using rayon
+$ time target/debug/mandelbrot mandel_rayon.png 4000x3000 -1.20,0.35 -1,0.20
+real    0m30.894s
+user    1m45.340s
+sys     0m0.025s
+# in chapter02 dir. 
+$ time target/debug/mandelbrot mandel_rayon.png 4000x3000 -1.20,0.35 -1,0.20
+
+real    0m30.503s
+user    1m48.222s
+sys     0m0.033s
+
+```
 
 ## 19.2 チャネル
 ### 19.2.1 値の送信
