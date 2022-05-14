@@ -1,6 +1,8 @@
 # learnig_programing_rust_2nd_edition
 O'reillyの[”プログラミング Rust 第2版”](https://www.oreilly.co.jp/books/9784873119786/)の学習用リポジトリです。
 
+[公式Git](https://github.com/ProgrammingRust)
+
 ## 目標
 - 理解の曖昧だったエラーハンドリングの理解を深め、実際にエラーハンドリングを設計・実装できるようになる(7章 ✅ [here](./chapter07/prac_thiserror/src/main.rs))
 - イテレーションやユーティリティトレイトの仕組みを理解して活用できるようになる（13章✅,15章✅,16章 ✅）
