@@ -1,0 +1,3 @@
+[submodule "chapter19/section19_2/fingertips"]
+	path = chapter19/section19_2/fingertips
+	url = git@github.com:MrBearing/fingertips.git
