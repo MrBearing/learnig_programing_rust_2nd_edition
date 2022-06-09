@@ -20,3 +20,17 @@ where
     outbound.write_all(json.as_bytes()).await?;
     Ok(())
 }
+
+use serde::de::DeserializeOwned;
+
+pub fn receive_as_json<S, P>(inbound: S)-> impl Stream<Item = ChatResult<P>>
+    where S: async_std::io::BufRead + Unpin,
+          P: DeserializeOwned,
+{
+    inbound.lines()
+        .map(|line_result| -> ChatResult<P>{
+            let line = line_result?;
+            let parsed = serde_json::from_str::<P>(&line)?;
+            Ok(parsed)
+        })
+}

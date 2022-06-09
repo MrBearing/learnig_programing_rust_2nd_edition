@@ -3,10 +3,6 @@ use async_chat::utils::{self,ChatResult};
 use async_std::io;
 use async_std::net;
 
-fn parse_command(command :&String) -> Option<String>{
-    // TODO この部分はGithubを見ながら実装
-    None
-}
 
 async fn send_commands(mut to_server: net::TcpStream) -> ChatResult<()>{
     
@@ -27,6 +23,71 @@ async fn send_commands(mut to_server: net::TcpStream) -> ChatResult<()>{
     Ok(())
 }
 
+
 fn main(){
     println!("Hello world");
+}
+
+
+use async_chat::FromClient;
+use std::sync::Arc;
+fn parse_command( line :&str) -> Option<FromClient> {
+    // 個々はclapとか使って実装したほうが簡単かも。。
+    let (command,rest) = get_next_token(line)?;
+    if command == "post"{
+        let (group, rest) = get_next_token(rest)?;
+        let message = rest.trim_start().to_string();
+        return Some(FromClient::Post{
+            group_name: Arc::new(group.to_string()),
+            message: Arc::new(message),
+        });
+    } else if command == "join"{
+        let (group, rest) = get_next_token(rest)?;
+        if !rest.trim_start().is_empty() {
+            return None;
+        }
+        return Some(FromClient::Join{
+            group_name: Arc::new(group.to_string()),
+        });
+    } //else { // このesle節いるか？
+    //     eprintln!("Unrecognized command: {:?}",line);
+    //     return None;
+    // }
+    // この方がRustっぽい気がする return 
+    eprintln!("Unrecognized command: {:?}",line);
+    None
+}
+fn get_next_token(mut input: &str) -> Option<(&str, &str)> {
+    input = input.trim_start();
+    if input.is_empty() {
+        return None;
+    }
+
+    match input.find(char::is_whitespace){
+        Some(space) => Some((&input[0..space],&input[space..])),
+        None => Some((input,"")),
+    }
+
+
+}
+
+
+use async_chat::FromServer;
+
+async fn handle_replies(from_server: net::TcpStream) -> ChatResult<()> {
+    let buffered = io::BufReader::new(from_server);
+    let mut reply_stream = utils::receive_as_json(buffered);
+    
+    while let Some(reply) = reply_stream.next().await {
+        match reply? {
+            FromServer::Message {group_name, message} => {
+                println!("message posted to {}: {}",group_name,message);
+            }
+            FromServer::Error(message) => {
+                println!("error from server: {}",message);
+            }
+        }
+    }
+    
+    Ok(())
 }
