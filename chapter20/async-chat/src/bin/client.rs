@@ -23,9 +23,22 @@ async fn send_commands(mut to_server: net::TcpStream) -> ChatResult<()>{
     Ok(())
 }
 
+use async_std::task;
 
-fn main(){
-    println!("Hello world");
+fn main() -> ChatResult<()>{
+    let address = std::env::args().nth(1)
+        .expect("Usage: client ADDRESS:PORT");
+    
+        task::block_on(async{
+            let socket = net::TcpStream::connect(address).await?;
+            socket.set_nodelay(true)?;
+            let to_server = send_commands(socket.clone());
+            let from_server = handle_replies(socket);
+
+            from_server.race(to_server).await?;
+
+            Ok(())
+        })
 }
 
 
@@ -77,17 +90,17 @@ use async_chat::FromServer;
 async fn handle_replies(from_server: net::TcpStream) -> ChatResult<()> {
     let buffered = io::BufReader::new(from_server);
     let mut reply_stream = utils::receive_as_json(buffered);
-    
+
     while let Some(reply) = reply_stream.next().await {
         match reply? {
-            FromServer::Message {group_name, message} => {
-                println!("message posted to {}: {}",group_name,message);
+            FromServer::Message { group_name, message } => {
+                println!("message posted to {}: {}", group_name, message);
             }
             FromServer::Error(message) => {
-                println!("error from server: {}",message);
+                println!("error from server: {}", message);
             }
         }
     }
-    
+
     Ok(())
 }
