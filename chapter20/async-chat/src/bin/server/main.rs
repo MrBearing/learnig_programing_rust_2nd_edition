@@ -6,7 +6,7 @@ mod connection;
 mod group;
 mod group_table;
 
-use connection::server;
+use connection::serve;
 
 
 fn main() -> ChatResult<()> {
@@ -19,7 +19,7 @@ fn main() -> ChatResult<()> {
         use async_std::{net, task};
         let listener = net::TcpListener::bind(address).await?;
 
-        let new_connections = listener.incoming();
+        let mut new_connections = listener.incoming();
         while let Some(socket_result) = new_connections.next().await{
             let socket = socket_result?;
             let groups = chat_group_table.clone();

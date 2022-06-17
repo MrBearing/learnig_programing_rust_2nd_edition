@@ -18,6 +18,9 @@ async fn send_commands(mut to_server: net::TcpStream) -> ChatResult<()>{
             Some(request) => request,
             None => continue,
         };
+
+        utils::send_as_json(&mut to_server, &request).await?;
+
         to_server.flush().await?;
     }
     Ok(())
